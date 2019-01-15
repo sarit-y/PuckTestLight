@@ -19,7 +19,6 @@
     var path = document.getElementsByTagName('path')[0];
     // Make sure your mouse cursor turns into a hand when over it, and gray it out
     path.style="cursor:pointer;fill:#BBB";
-
     function getLightValue() {
       Puck.eval("Puck.light()", function(v) {
         path.style.fill="rgb("+Math.round(v*255)+",0,0)";
@@ -28,7 +27,6 @@
         }, 250);
       });
     }
-
     // When clicked, start trying to get the light value
     path.addEventListener("click", function() {
       getLightValue();
